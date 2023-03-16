@@ -24,6 +24,6 @@ app.use((req,res,next)=>{
     });
 
 
-app.listen(port,()=>{console.log(`Corriendo en http://localhost:${port}`)});
+app.listen(port,()=>{console.log(`Corriendo ahora en http://localhost:${port}`)});
 
 
