@@ -9,14 +9,18 @@ router.get('/',async (req,res)=>{
     try{
         const mascotasArrayBD = await Mascota.find();
         res.render('mascotas',{
-            mascotasArray: mascotasArrayBD,
-            titulo: "Mascotas",
-            desc: "Pagina de las Mascotas"
-        });
-        // console.log(mascotasArrayBD);
+        mascotasArray: mascotasArrayBD,
+        titulo: "Mascotas",
+        desc: "Pagina de las Mascotas"
+    });
+        console.log(mascotasArrayBD);
     }catch(err){
         console.log(err);
-    }    
-});
+    }
+
+    
+})
+
+
 
 module.exports = router;
