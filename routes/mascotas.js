@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mascota = require('../models/mascota');
+
 const Mascota = require('../models/mascota');
 
 
