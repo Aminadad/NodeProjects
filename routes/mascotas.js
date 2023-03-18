@@ -1,18 +1,24 @@
 const express = require('express');
 const router = express.Router();
+const mascota = require('../models/mascota');
+const Mascota = require('../models/mascota');
 
 
-router.get('/',(req,res)=>{
-    res.render('mascotas',{
-        mascotasArray: [
-            {id:"d1", nombre: "Doguy", desc: "Mi Mascota Goguy"},
-            {id:"d2", nombre: "Puchoguy", desc: "Mi Mascota Puchoguy"},
-            {id:"d3", nombre: "Cpitan", desc: "Mi Mascota Capitan"},
-            {id:"d4", nombre: "Puchunga", desc: "Mi Mascota Puchunga"}
-        ],
-        titulo: "Mascotas",
-        desc: "Pagina de las Mascotas"
-    })
+router.get('/',async (req,res)=>{
+
+    try{
+        const mascotasArrayBD = await Mascota.find();
+        res.render('mascotas',{
+            mascotasArray: mascotasArrayBD,
+            titulo: "Mascotas",
+            desc: "Pagina de las Mascotas"
+        });
+        // console.log(mascotasArrayBD);
+    }catch(err){
+        console.log(err);
+    }
+
+    
 })
 
 
