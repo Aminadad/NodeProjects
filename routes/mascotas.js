@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
 const Mascota = require('../models/mascota');
-
 
 router.get('/',async (req,res)=>{
 
@@ -16,8 +14,7 @@ router.get('/',async (req,res)=>{
         console.log(mascotasArrayBD);
     }catch(err){
         console.log(err);
-    }
-
+    } 
     
 })
 

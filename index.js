@@ -10,7 +10,7 @@ main();
 async function main(){
     try{
         const URI = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@clusteraminadad.j8lmrfp.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
-        await mongoose.connect(URI);
+        await mongoose.createConnection(URI);
         await console.log('Coneccion establecida');
     }catch(err){
         console.log(err);
