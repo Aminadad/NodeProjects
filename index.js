@@ -3,7 +3,8 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
+
 
 //Coneccion a bd
 main();
