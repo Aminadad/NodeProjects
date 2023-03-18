@@ -16,11 +16,7 @@ router.get('/',async (req,res)=>{
         // console.log(mascotasArrayBD);
     }catch(err){
         console.log(err);
-    }
-
-    
-})
-
-
+    }    
+});
 
 module.exports = router;
